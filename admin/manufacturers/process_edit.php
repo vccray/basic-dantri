@@ -1,5 +1,5 @@
 <?php 
-
+require '../check_super_admin.php';
 if (empty($_POST['id'])) {
 	header('location:form_edit.php?error=Phai truyen ma de sua');
 	exit;

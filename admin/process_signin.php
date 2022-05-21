@@ -1,14 +1,11 @@
 <?php 
 
-$email= $_POST['email'];
-$pass= $_POST['pass'];
-if (isset($_POST['remember'])) {
-	$remember = true;
-} else
-	$remember = false;
-require 'admin/connect.php';
-$sql = "select * from customers
-where email = '$email' and pass = '$pass'";
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+require 'connect.php';
+$sql = "select * from admin
+where email = '$email' and password = '$password'";
 
 $result = mysqli_query($connect,$sql);
 $number_row = mysqli_num_rows($result);
@@ -20,6 +17,7 @@ if ($number_row == 1) {
 	$id = $each['id'];
 	$_SESSION['id'] = $each['id'];
 	$_SESSION['name'] = $each['name'];
+	$_SESSION['level'] = $each['level'];
 
 	if ($remember) {
 		$token = uniqid('user_',true);
@@ -30,7 +28,8 @@ if ($number_row == 1) {
 		setcookie('remember', $id, time() + 86400 * 30);
 	}
 
-	header('location:index.php');
+	header('location:root/index.php');
 	exit;
 }
 header('location:index.php?error = Sai ten dang nhap va mat khau');
+ ?>

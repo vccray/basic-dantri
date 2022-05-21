@@ -1,5 +1,5 @@
 <?php
-
+require '../check_admin.php';
 //if (empty($_POST['name']) || empty($_POST['picture']) || empty($_POST['manu_id']) || //empty($_POST['price']) || empty($_POST['description'])) {
 	//header('location:form_insert.php?error=Phai dien day du thong tin');
 	//exit;

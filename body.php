@@ -25,7 +25,8 @@
 			</h3>
 			<img src="admin/products/photo/<?php echo $each['picture'] ?>" height=100px>
 			<p><?php echo $each['price'] ?> millions</p>
-			<a href="detail.php?id=<?php echo $each['id'] ?>">More Detail</a>
+			<a href="detail.php?id=<?php echo $each['id'] ?>">More Detail</a> <br>
+			<a href="add_to_cart.php?id=<?php echo $each['id'] ?>">Add to cart</a>
 		</div>
 	<?php endforeach ?>
 </div>

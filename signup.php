@@ -19,6 +19,10 @@
 		<input type="email" name="email"> <br>
 		Password
 		<input type="password" name="pass"> <br>
+		Phone number
+		<input type="text" name="phone"> <br>
+		Address
+		<input type="text" name="address"> <br>
 		<button>Complete</button>
 	</form>
 </body>
